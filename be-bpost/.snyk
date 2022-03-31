@@ -1,0 +1,21 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - chai-http > superagent > form-data > mime:
+        patched: '2019-11-25T09:58:45.641Z'
+    - chai-http > superagent > mime:
+        patched: '2019-11-25T09:58:45.641Z'
+  SNYK-JS-LODASH-567746:
+    - winston > async > lodash:
+        patched: '2020-05-03T23:04:23.201Z'
+      request-promise > request-promise-core > lodash:
+        patched: '2020-05-19T06:38:59.395Z'
+    - express-winston > lodash:
+        patched: '2020-05-03T23:04:23.201Z'
+      winston > async > lodash:
+        patched: '2020-05-19T06:38:59.395Z'
+    - express-winston > lodash:
+        patched: '2020-05-19T06:38:59.395Z'

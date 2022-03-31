@@ -1,0 +1,24 @@
+{
+  "update": {
+    "partialUpdateMeta": {
+      "consumer": "IPOS",
+      "operationMeta": "ADDRESS",
+      "sourceInternalId": "",
+      "externalUserId": ""
+    },
+    "customer": {
+      "updated": "2019-05-24T09:46:53.166Z",
+      "partyUId": "28928A1C-6838-11e9-826C-005056995894",
+      "addresses": [
+        {
+          "contextType": "HOME_GRP1",
+          "city": "Walloon Brabant",
+          "postalCode": "3272",
+          "country": "BE",
+          "streetAddress1": "Boulevard Paepsem",
+          "updated": "2019-05-24T09:46:53.166Z"
+        }
+      ]
+    }
+  }
+}

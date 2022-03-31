@@ -1,0 +1,33 @@
+resources:
+- name: {{ env['name'] }}-topic
+  type: pubsub.v1.topic
+  properties:
+    topic: {{ env['name'] }}
+    labels:
+        environment: {{ properties['environment'] }}
+        product: {{ properties['product'] }}
+  accessControl:
+    gcpIamPolicy:
+      bindings:
+      - role: roles/pubsub.publisher
+        members:
+        - "serviceAccount:{{ properties['buildSvcAccountEmail'] }}"
+      - role: roles/pubsub.viewer
+        members:
+        - "serviceAccount:{{ properties['buildSvcAccountEmail'] }}"
+- name: {{ env['name'] }}-subscription
+  type: pubsub.v1.subscription
+  properties:
+    subscription: {{ env['name'] }}-sub
+    topic: $(ref.{{ env['name'] }}-topic.name)
+    ackDeadlineSeconds: {{ properties['ackDeadlineSeconds'] }}
+    labels:
+        environment: {{ properties['environment'] }}
+        product: {{ properties['product'] }}
+    pushConfig:
+        pushEndpoint: {{ properties['pushEndpoint'] }}
+        oidcToken:
+                serviceAccountEmail: {{ properties['serviceAccountEmail'] }}
+      
+    
+    

@@ -1,0 +1,14 @@
+steps:
+  - name: "node:10.15.1"
+    args: ["npm", "install"]
+
+  - name: "node:10.15.1"
+    args: ["npm", "run", "unit-test"]
+
+  - name: "node:10.15.1"
+    args: ["npm", "run", "integ-test"]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "app-dev.yaml"]
+
+timeout: "1600s"

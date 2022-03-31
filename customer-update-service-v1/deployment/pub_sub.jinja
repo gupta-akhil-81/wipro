@@ -1,0 +1,34 @@
+resources:
+- name: {{ env['name'] }}-topic
+  type: pubsub.v1.topic
+  properties:
+    topic: {{ env['name'] }}
+    labels:
+        environment: 'prod'
+        product: 'icf-customer-updates'
+  accessControl:
+    gcpIamPolicy:
+      bindings:
+      - role: roles/pubsub.publisher
+        members:
+        - "serviceAccount:{{ properties['buildAccountEmail'] }}"
+      - role: roles/pubsub.viewer
+        members:
+        - "serviceAccount:{{ properties['buildAccountEmail'] }}"
+- name: {{ env['name'] }}-subscription
+  type: pubsub.v1.subscription
+  properties:
+    subscription: {{ env['name'] }}-sub
+    topic: $(ref.{{ env['name'] }}-topic.name)
+    ackDeadlineSeconds: {{ properties['ackDeadlineSeconds'] }}
+    labels:
+       environment: 'prod'
+       product: 'icf-customer-updates'
+    pushConfig:
+        pushEndpoint: {{ properties['pushEndpoint'] }}
+        oidcToken:
+                serviceAccountEmail: {{ properties['serviceAccountEmail'] }}
+
+
+    
+    

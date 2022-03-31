@@ -1,0 +1,5 @@
+cron:
+- description: Job for daily ftp file processing at 0400 hours
+  url: /ftp-files/process
+  schedule: every day 04:00
+  target: be-bpost

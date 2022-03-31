@@ -1,0 +1,14 @@
+{
+  "message": {
+    "attributes": {
+      "operation": "partialUpdate",
+      "partyUId": "B5D394B9-6B62-11e9-8214-005056B12CB9",
+      "retailUnit": "gb"
+    },
+    "data": "eyJ1cGRhdGUiOnsicGFydGlhbFVwZGF0ZU1ldGEiOnsiY29uc3VtZXIiOiJJUE9TIiwib3BlcmF0aW9uTWV0YSI6IkFERFJFU1MifSwiY3VzdG9tZXIiOnsidXBkYXRlZCI6IjIwMTktMDUtMjRUMDk6MzA6NTMuMTY2WiIsImFkZHJlc3NlcyI6W3siY29udGV4dFR5cGUiOiJIT01FX0dSUDEiLCJjaXR5IjoiV2ltYmVsZG9uIiwicG9zdGFsQ29kZSI6IkxTMTggNEFCIiwic3RhdGUiOiJNYW5jaGVzdGVyIiwiY291bnRyeSI6IkdCIiwiaG91c2VOdW1iZXIiOiIxMTEtNTMiLCJzdHJlZXRBZGRyZXNzMSI6InRlc3QgIDEyMDEsIEZMT09SIDgiLCJzdHJlZXRBZGRyZXNzMiI6IkxnaCAxNDAyIiwidXBkYXRlZCI6IjIwMTktMDUtMjRUMDk6MzA6NTMuMTY2WiJ9XX19fQ==",
+    "messageId": "589285969581876",
+    "message_id": "589285969581876",
+    "publishTime": "2019-06-19T11:04:26.677Z",
+    "publish_time": "2019-06-19T11:04:26.677Z"
+  }
+}

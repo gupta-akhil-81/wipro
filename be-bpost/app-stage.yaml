@@ -1,0 +1,45 @@
+runtime: nodejs10
+service: be-bpost
+env: standard
+instance_class: B4
+basic_scaling:
+  idle_timeout: 60m
+  max_instances: 1
+
+network: {}
+
+env_variables:
+  PORT: 8080
+  #for local testing set it to local. for testing on cloud set it to cloud.
+  LOG_ENV: cloud
+  LOG_LEVEL: info
+  NODE_ENV: stage
+  PROJECT_ID: xyz-icf-integration-stage
+  BUCKET_NAME: be-bpost-xyz-icf-integration-stage
+  FTP_HOST: filetransfer-ac.bpost.be
+  FTP_USER: dmmxyz
+  FILE_EXT: .csv
+  FTP_DIRECTORY: IN
+  DELAY_BEFORE_START_READING_FROM_BUCKET: 5000
+  LOYALTY_CARD_NUMBER_PREFIX: 627598
+  DOWNLOAD_DIRECTORY: downloaded
+  BACKUP_DIRECTORY: backup
+  LOCAL_ERR_DIRECTORY: error
+  TEST_KMS_VALUE: TEST
+  PUBSUB_TOPIC_NAME: customer-updates-v2
+  FIND_URL: https://api.xyz.ppe.xyzdt.com/cma/profile/find/v1/be
+  FIND_GRANT_TYPE: client_credentials
+  FIND_AUDIENCE: https://xyz-goolge-dev.xyz.com
+  LOCAL_DEV: false
+  KEY_RING_ID: icf-ci-kms-ring
+  KEY_ID: icf-ci-kms-key
+  FIND_TOKENURL: https://xyz-google-app-test.eu.auth0.com/oauth/token
+  FIND_TOKEN_CLIENTID_SECURE: be-bpost-find-token-clientid
+  FIND_TOKEN_CLIENTSECRET_SECURE: be-bpost-find-token-clientsecret
+  FIND_CLIENTID_SECURE: be-bpost-find-clientid
+  FTP_PASSWORD_SECURE: be-bpost-ftp-password
+  BPOST_PRIVATE_KEY_SECURE: be-bpost-bpost-private-key
+  BPOST_PASSPHRASE_SECURE: be-bpost-bpost-passphrase
+  # changes for schema validation - adding attributes source and target system , icf - 7414
+  CONSUMER : BEBPOST
+  TARGETSYSTEM : ICMC

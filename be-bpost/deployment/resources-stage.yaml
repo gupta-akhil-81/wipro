@@ -1,0 +1,12 @@
+﻿imports:
+  - path: 1-storage_bucket.jinja
+#be-bpost-xyz-icf-integration-test
+resources:
+  - name: be-bpost-xyz-icf-integration-stage
+    type: 1-storage_bucket.jinja
+    properties:
+      region: europe-west1
+      storageClass: REGIONAL
+      age: 60
+      environment: stage
+      product: be-bpost

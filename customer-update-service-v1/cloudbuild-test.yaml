@@ -1,0 +1,10 @@
+steps:
+  - name: "node:10.15.1"
+    args: ["npm", "install"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "app-test.yaml", "--version=${_TAG}"]
+
+timeout: "1600s"
+
+substitutions:
+  _TAG: v1.0.0 # default value

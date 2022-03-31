@@ -1,0 +1,11 @@
+steps:
+- name: "node:10.15.1"
+  args: ["npm", "install"]
+
+- name: "node:10.15.1"
+  args: ["npm", "run", "unit_test"]
+
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy", "app.global-customer-update-service-old-test.yaml" , "--version=$SHORT_SHA"]
+
+timeout: "1600s"

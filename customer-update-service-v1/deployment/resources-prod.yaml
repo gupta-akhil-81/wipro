@@ -1,0 +1,20 @@
+﻿imports:
+  - path: 1-pub_sub_service_account.jinja
+  - path: 2-pub_sub.jinja
+
+resources:
+  - name: customer-updates-svc
+    type: 1-pub_sub_service_account.jinja
+    properties:
+      displayName: Customer Updates PubSub Test
+      accountIdSuffix: test-customer-updates-svc
+      description: "Account used to authenticate customer updates pub/sub push request to appengine endpoint"
+  - name: customer-updates-pubsub-test
+    type: 2-pub_sub.jinja
+    properties:
+      serviceAccountEmail: $(ref.customer-updates-svc.email)
+      ackDeadlineSeconds: 60
+      pushEndpoint: https://customer-update-service-dot-xyz-icf-integration-prod.appspot.com/_ah/push-handlers/customers-updates/push?token=7ecf150f-0af0-4be7-8c35-a5816d122c17
+      buildSvcAccountEmail: 707909764038@cloudbuild.gserviceaccount.com
+      environment: test
+      product: customer-updates

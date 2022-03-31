@@ -1,0 +1,22 @@
+{
+    "update": {
+        "partialUpdateMeta": {
+            "consumer": "IPOS",
+            "operationMeta": "ADDRESS"
+        },
+        "customer": {
+            "updated": "2019-05-24T09:46:53.166Z",
+            "partyUId" : "B5D394B9-6B62-11e9-8214-005056B12CB9",
+            "addresses": [
+                {
+                    "contextType": "HOME_GRP1",
+                    "city": "Wimbeldon",
+                    "postalCode": "LS18 4AB",
+                    "country": "GB",
+                    "streetAddress1": "test  1201, FLOOR 9",
+                    "updated": "2019-05-24T09:46:53.166Z"
+                }
+            ]
+        }
+    }
+}

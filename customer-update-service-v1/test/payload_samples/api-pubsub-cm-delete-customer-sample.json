@@ -1,0 +1,14 @@
+{
+  "message": {
+    "attributes": {
+      "operation": "delete",
+      "partyUId": "AA096BE1-B4E7-11e9-AABC-00505699397A",
+      "retailUnit": "ca",
+      "sourceSystem":"icmc",
+      "targetSystem":"icm"
+    },
+    "data": "ewogICAgImRlbGV0ZSI6ewogICAgICAgICJkZWxldGVNZXRhIjogewogICAgICAgICAgICAiY29uc3VtZXIiOiAiSVBPUyIsCiAgICAgICAgICAgICJzb3VyY2VJbnRlcm5hbElkIjogIiIsCiAgICAgICAgICAgICJleHRlcm5hbFVzZXJJZCI6ICIiCiAgICAgICAgfQogICAgfQp9",
+    "messageId": "589285969581880",
+    "publishTime": "2019-07-09T15:04:26.677Z"
+  }
+}

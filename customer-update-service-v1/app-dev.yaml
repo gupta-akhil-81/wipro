@@ -1,0 +1,45 @@
+runtime: nodejs10
+env: standard
+instance_class: B2
+manual_scaling:
+  instances: 1
+
+service: customer-update-service
+handlers:
+  - url: /
+    script: auto
+    secure: always
+  - url: /_ah/push-handlers/.*
+    script: auto
+    secure: always
+
+env_variables:
+  PORT: 8080
+  NODE_ENV: dev
+  GOOGLE_CLOUD_PROJECT: xyz-icf-integration-dev
+  partialUpdate_url: https://api.xyz.ppe.xyzdt.com/customer/icm/profile/partialUpdate/
+  icm_onprem_client_id: 222a9e69--423f-833b-3c77c480a017
+  icm_onprem_apigw_key: eC1jaWZhdXRoLnIEOiNTd2NW1xJHQ=
+  icm_onprem_client_secret: E5cT7xH6fI0mK3jXY7hB3nF7cS7fA3hY1pL6hL8
+  icm_onprem_service_account_password: tOrpse35
+  icm_onprem_service_account_name: s-custint-a-ppseelm
+  call_customer_api: true
+  bypass_datetime_check: false
+  use_cloud_tasks: true
+  KEY_RING_ID: icf-ci-kms-ring
+  KEY_ID: icf-ci-kms-key
+  PUBSUB_SUBSCRIPTION_NAME: customer-updates-pubsub-dev-sub
+  PUBSUB_VERIFICATION_TOKEN: 7ecf150f-8c35-a5816d122c17
+  PUBSUB_VERIFICATION_ACCOUNT: icf-dev-customer-updates-svc@xyz-icf-integration-dev.iam.gserviceaccount.com
+  CLOUD_TASK_QUEUE_NAME: customer-updates-queue
+  CLOUD_TASK_LOCATION: europe-west1
+  CUST_INTERACTION_PROJECT_ID: xyz-icfinteractions-dev
+  CUST_INTERACTION_EMAIL: localtest@xyz-icfinteractions-dev.iam.gserviceaccount.com
+  CUST_INTERACTION_TOPIC: Customerinteractions
+  CUST_INTERACTION_PRIVATE_KEY_SECURE: CiQAL4KJE2ITspOV5ME+WkX8bV5PwTZ4fxDnMANMvOV+nVF0j3AULZlvuBTk+Gzpckd700EsZlAA2LMDjv3VImkdvb4nFy7xF/cJA0Hmv4MWzfL0nUSfY89Vdg0N/3u8yUP87TIPu/F93xPsSIraLZ8srLSBwau/Pxbl3poQSOIaR0f669baTIpoXHq4ZHMD7FqeD2naof/qT3zq4WPlNSnkAk4LRHalgE0mTmVL5aPtQbQEPMcZo9g51hy+rDT48juubPdtha4oeYircNoVkkcz4iEl5nk5oJeAG8mpzM9lDcTjSPupdbIkSMnp/1KEd+EHlNbJu+glkez/044Q9WaNX/bJopXz2idvb0Nfn2THriXIfHkKwf/4Y+t9jI4i4tlFJgsVtWrzwaETIhVi8oT+tzVEa9lhaH6pZa8ATTjvkNhIfVi1VkQJZb7qeNGGbax3dula/qHFe9qOCOWvPPh5T4+gF9lId7BSQ0u1mMR6EOUOHmlJoPLrpeqXpKz3MfL8KOFbpS6MRhcZZlz6Gmo38POcI2wTJwfNTLKGMopDUuhq7LIL4hQl3mp7OI1Z30uIFf0txNvmdhMF95CAwiUvllT+rKH9QT1YrSo2GZykeunzGQbYYyDu33cbOopYXsbdhevW0cPAG9rTOOtCql82nmzMgzTLdpbKW2SniC0CUDlWnHkuQLqR5xIKa5v7Ex5H7+MaEl3qlFaIZxK75PXAol6XzfhAX/mHE1RIBareKBSdOcwLzOa5U6bKMAJdl1SdUW1+CoIcbgqbUMqUsYEoXMf/Kl26UatI/Nuxw8uVP2PjEO2drDframJZ9uCVU3onTXZieL8Jiwkn/qnpNWbNAvcxE2uGTHdDTmAO+uW9L+TqtCb7s7SFgGi/28h/yio4ZYdEaIOuBWcquL1zKgcsoVLlQNsDNsDitY4gXqu6SicIaD9IXQNcHiMCg3aTbVsZmADuw6P3p6iag/A3M1ZwVC3bX+YS4+0wgkH8gAIdvLxtt06BnzmN/Jy8tLV6DOf4bCxLPGx4jvEKNvML4S8qQeh/cKJt14H4QjFpi9zRzt9rBTSQrjDF3Prc9PVeYBqJxmKnQG57eLQ3LVnL21IH4TlN5BKiC1tscPur80ARVuLvPiwIX+uEgOjJvzlMlPoZ5nu9LFnOUFXR28L4HJHgmDq2qsg8GJjSeUF5zHcSxeH1AU+af7MU8dbpXGGqmWT0goUJTC40hhsWmlfynZChMza7OK1Yi5K3gqCBmVkafTG4ezFp69Yr8tziiLOx51y3aYYLjeH6VhGx89cAwZcdV5oY3p1OIN1IviWUWzKxlnq1xbnrrDY4HteaahApNHEam3Y1tVdpG+4lHGE8SAth6jCAF6KqF+Pz7B+BODK8TekqplWlEpfdKCEJ0tiBnbDberHvPhrFmasclui49TO5LDKKzEGTkrlJPoCrsMLCQiUWh/zYsSwQxfzvldztyzcYsQpqDxV/wXPcuBhan5LeoaaOHewnAlSp7OaMqiemGyFf1u1PFMLxLBaDavfbLmGNCL1C1Rp853BKVaQfJyV5o70qdnYoVl0pTcX6jmdxz9p8Q66gKOyy5mQOydtD+rUnHKnkAPADrlmKDroMNzB5LALL124mZ3xm9AEkB49eMKEbHJY3uqo2/lci6BleUJLsXiThZtghWhbaQv6uPOz4TBH4QBqeoT6ROevkUr38GHdOnEAGd/gnn1vMzpQMS87eOYz86oCc2f9nVvdJq1UlKIAmMaKe5MhgF4/edxptul0INysujiEYA0MAx1hZqYEt8ctNYkzNbdPyHEfaC503WWmjHGTvamBRScOSD0Dk/3KfpMv2uj1GtQ+CEfLtA2x
+  TEST_KMS_VALUE_SECURE: CiQAL4KJExlFXb3hRLAhdIiUBPyZESLQCrMmxDM6EQZQh70BqFurVP4dx7FLQJjL9roglb3PVCvQjd5ZarpAE+d4dUAg==
+  ICM_API_BASE_URL: https://api.xyz.ppe.xyzdt.com/customer/icm/
+  CALL_ICM_CUSTOMER_API: true
+  USE_API_CUSTOMER_CLOUD_TASKS: true
+  LOG_LEVEL: info
+  LOG_ENVIRONMENT: cloud

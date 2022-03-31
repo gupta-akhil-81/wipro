@@ -1,0 +1,27 @@
+{
+    "update":{
+        "updateMeta": {
+            "consumer": "IPOS",
+            "sourceInternalId": "",
+            "externalUserId": ""
+        },
+        "customer": {
+            "type": "Individual",
+            "countryCode": "CA",
+            "vATNumber": "VATNumber",
+            "initialBUCode": "144",
+            "initialBUType": "STO",
+            "preferredBUCode": "144",
+            "preferredBUType": "STO",
+            "preferredBUCountryCode": "CA",
+            "created": "2019-07-28T14:07:17Z",
+            "firstName": "Antonio",
+            "lastName": "Garcias",
+            "title": "MR",
+            "genderCode": "MALE",
+            "socialSecurityNumber": "4121223039823",
+            "contactLanguageCode": "EN",
+            "protectedIdentity": "N"
+        }
+    }
+}

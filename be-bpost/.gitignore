@@ -1,0 +1,4 @@
+node_modules
+.project
+test/payload_samples/bpost-15-test.csv
+test/payload_samples/bpost-1000-test.csv

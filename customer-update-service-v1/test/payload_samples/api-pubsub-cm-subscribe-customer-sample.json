@@ -1,0 +1,14 @@
+{
+  "message": {
+    "attributes": {
+      "operation": "subscribe",
+      "partyUId": "AA096BE1-B4E7-11e9-AABC-00505699397A",
+      "retailUnit": "ca",
+      "sourceSystem":"icmc",
+      "targetSystem":"icm"
+    },
+    "data": "ewogICAgImlucHV0IjogewogICAgICAgICJvcGVyYXRpb25NZXRhIjogewogICAgICAgICAgICAib3BlcmF0aW9uIjogIlNVQlNDUklCRSIsCiAgICAgICAgICAgICJleHRlcm5hbFN5c3RlbUlkIjogIklSVyIKICAgICAgICB9LAogICAgICAgICJhY2NvdW50IjogW3sKICAgICAgICAgICAgImV4dGVybmFsU3lzdGVtUmVmSWQiOiAiQUEwOTZCRTEtQjRFNy0xMWU5LUFBQkMtMDA1MDU2OTkzOTdBIiwKICAgICAgICAgICAgInBhcnR5VUlkIjogIkFBMDk2QkUxLUI0RTctMTFlOS1BQUJDLTAwNTA1Njk5Mzk3QSIKICAgICAgICB9XQogICAgfQp9",
+    "messageId": "589285969581878",
+    "publishTime": "2019-07-09T13:04:26.677Z"
+  }
+}

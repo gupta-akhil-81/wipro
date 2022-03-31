@@ -1,0 +1,21 @@
+{% set deployment = env['deployment'] %}
+{% set project = env['project'] %}
+
+resources:
+- name: get-iam-policy
+  action: gcp-types/cloudresourcemanager-v1:cloudresourcemanager.projects.getIamPolicy
+  properties:
+    resource: {{ project }}
+  metadata:
+    runtimePolicy:
+    - 'UPDATE_ALWAYS'
+- name: patch-iam-policy
+  action: gcp-types/cloudresourcemanager-v1:cloudresourcemanager.projects.setIamPolicy
+  properties:
+    resource: {{ project }}
+    policy: $(ref.get-iam-policy)
+    gcpIamPolicyPatch:
+      add:
+      - role: roles/iam.serviceAccountTokenCreator
+        members:
+        - "serviceAccount: {{ properties['pubSubSvcAccountEmail'] }}"

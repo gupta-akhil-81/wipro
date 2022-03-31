@@ -1,0 +1,87 @@
+{
+    "create":{
+        "createMeta": {
+            "consumer": "IPOS",
+            "sourceInternalId": "AA096BE1-B4E7-11e9-AABC-00505699397A",
+            "externalUserId": ""
+        },
+        "customer": {
+            "partyUId":"AA096BE1-B4E7-11e9-AABC-00505699397A",
+            "type": "Individual",
+            "countryCode": "CA",
+            "vATNumber": "VATNumber",
+            "initialBUCode": "144",
+            "initialBUType": "STO",
+            "preferredBUCode": "144",
+            "preferredBUType": "STO",
+            "preferredBUCountryCode": "CA",
+            "created": "2019-07-28T14:07:17Z",
+            "firstName": "Antonio",
+            "lastName": "Garcias",
+            "title": "MR",
+            "genderCode": "MALE",
+            "socialSecurityNumber": "4121223039822",
+            "contactLanguageCode": "EN",
+            "protectedIdentity": "N",    		
+            "addresses": [{
+                            "city": "Bangalore",
+                            "postalCode": "560004",
+                            "country": "IN",
+                            "contextType": "HOME_GRP1",
+                            "streetAddress1": "Shankarapuram",
+                            "streetAddress2": "Near Keshava Krupa",
+                            "streetAddress3": "Basavangudi"
+                            }
+            ],
+            "contactMethods": [{
+                "type": "EMAIL",
+                "value": "keshavkrupa@rss.com",
+                "verificationCode": "NOT_VERIFIED",
+                "contextType": "HOME_GRP1"
+            },
+            {
+                "type": "PHONE",
+                "value": "28245667",
+                "countryCode": "+91",
+                "contextType": "HOME_GRP1",
+                "verificationCode": "NOT_VERIFIED"
+            },
+            {
+                "type": "SMS",
+                "value": "722297654",
+                "countryCode": "+46",
+                "contextType": "HOME_GRP1",
+                "verificationCode": "NOT_VERIFIED"
+            }],
+            "integrityCodes": [{
+                "integrityType": "AllowPersonalEmail",
+                "consentCode": "NO"
+            },
+            {
+                "integrityType": "AcceptTermsAndCond",
+                "consentCode": "YES"
+            },
+            {
+                "integrityType": "AcceptPrivacyPolicy",
+                "consentCode": "YES"
+            }],"loyaltyMemberships": [
+                {
+                    "programCode": "FAMILYCA",
+                    "status": "ACTIVE",
+                    "created": "2019-08-05T21:28:11Z",
+                    "updated": "2019-08-05T21:28:11Z",
+                    "membershipCards": [
+                        {
+                            "id": "ICM2-9FOKI0",
+                            "cardNumber": "6275980243002709170",
+                            "cardType": "NOTSET",
+                            "cardCreator": "NOTSET",
+                            "created": "2019-08-05T21:28:11Z",
+                            "updated": "2019-08-05T21:28:11Z"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,45 @@
+﻿imports:
+  - path: 1-pub_sub_service_account.jinja
+  - path: 2-pub_sub.jinja
+  - path: 3-ci_cd_service_account.jinja
+  - path: 4-kms.jinja
+  - path: 5-pub_sub_token_creator.jinja
+
+resources:
+  - name: pubsub-svc
+    type: 1-pub_sub_service_account.jinja
+    properties:
+      displayName: Customer Updates PubSub
+      accountIdSuffix: customer-updates-pubsub
+      description: "Account used to authenticate customer updates pub/sub push request to appengine endpoint"
+  - name: customer-updates-pubsub
+    type: 2-pub_sub.jinja
+    properties:
+      serviceAccountEmail: $(ref.pubsub-svc.email)
+      ackDeadlineSeconds: 60
+      pushEndpoint: https://customer-update-service-dot-xyz-icf-integration-prod.appspot.com/_ah/push-handlers/customers-updates/push?token=7ecf150f-0af0-4be7-8c35-a5816d122c17
+      buildSvcAccountEmail: 664102736546@cloudbuild.gserviceaccount.com
+      pubSubSvcAccountEmail: service-664102736546@gcp-sa-pubsub.iam.gserviceaccount.com
+  - name: cicd-svc-prd
+    type: 3-ci_cd_service_account.jinja
+    properties:
+      displayName: CI/CD Service Account Prod
+      accountIdSuffix: ci-cd-prd
+      description: "Account used to run all CI/CD pipelines to the production environment"
+  - name: cicd-svc-test
+    type: 3-ci_cd_service_account.jinja
+    properties:
+      displayName: CI/CD Service Account Test
+      accountIdSuffix: ci-cd-test
+      description: "Account used to run all CI/CD pipelines to the test environment"
+#name: pubsub-svc-grant-token
+#type: 5-pub_sub_token_creator.jinja
+#properties:
+#pubSubSvcAccountEmail: service-664102736546@gcp-sa-pubsub.iam.gserviceaccount.com
+#- name: kms-env-vars
+#  type: kms.jinja
+#  properties:
+#    keyringId: icf-customintegrations-secrets
+#    keyid: integration-secrets
+#    region: global
+#    svcAccount: 627245087595@cloudbuild.gserviceaccount.com

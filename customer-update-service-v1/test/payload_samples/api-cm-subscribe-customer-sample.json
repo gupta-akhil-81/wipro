@@ -1,0 +1,12 @@
+{
+    "input": {
+        "operationMeta": {
+            "operation": "SUBSCRIBE",
+            "externalSystemId": "IRW"
+        },
+        "account": [{
+            "externalSystemRefId": "AA096BE1-B4E7-11e9-AABC-00505699397A",
+            "partyUId": "AA096BE1-B4E7-11e9-AABC-00505699397A"
+        }]
+    }
+}

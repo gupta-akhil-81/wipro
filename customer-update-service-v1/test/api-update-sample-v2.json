@@ -1,0 +1,51 @@
+{
+  "update": {
+    "partialUpdateMeta": {
+      "consumer": "IPOS",
+      "operationMeta": "ADDRESS",
+      "sourceInternalId": "",
+      "externalUserId": ""
+    },
+    "customer": {
+      "updated": "2019-05-24T09:46:53.166Z",
+      "partyUId": "28928A1C-6838-11e9-826C-005056995894",
+      "addresses": [
+        {
+          "contextType": "HOME_GRP1",
+          "city": "Walloon Brabant",
+          "postalCode": "3272",
+          "country": "BE",
+          "streetAddress1": "Boulevard Paepsem",
+          "updated": "2019-05-24T09:46:53.166Z"
+        }
+      ]
+    }
+  },
+  "interaction": {
+    /*
+    "data": {
+      customerId": "Uid",
+      "customerIdType": "CUSTOMER_ID_MASTER",
+      "customerIdSource": "ICM",
+      "customerIdTrustCode": "MATCH.SYSTEM.EXTERNAL",
+      "locationCountryCode": "retailUnitToUpper",
+      "locationRetailUnitCode": "retailUnitToUpper",
+      "locationType": "EXT_PHYSICAL",
+      "locationCode": "",
+      "interactionId": "interactionId",
+      "interactionType": "ADDRESS_CHANGE",
+      "interactionTypeVerNo": 1,
+      "interactionDatetime": "updatedTs",
+      "interactionSystemId": "ICF-CI",
+      "customerInteractionDetail": [
+        {
+          "interactionDetailType": "ADDRESS_CHANGE",
+          "data": {
+            "addressType": "contextType"
+          }
+        }
+      ]
+    }
+*/
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "message": {
+    "attributes": {
+      "operation": "unsubscribe",
+      "partyUId": "AA096BE1-B4E7-11e9-AABC-00505699397A",
+      "retailUnit": "ca",
+      "sourceSystem":"icmc",
+      "targetSystem":"icm"
+    },
+    "data": "ewogICAgImlucHV0IjogewogICAgICAgICJvcGVyYXRpb25NZXRhIjogewogICAgICAgICAgICAib3BlcmF0aW9uIjogIlVOU1VCU0NSSUJFIiwKICAgICAgICAgICAgImV4dGVybmFsU3lzdGVtSWQiOiAiSVJXIgogICAgICAgIH0sCiAgICAgICAgImFjY291bnQiOiBbewogICAgICAgICAgICAiZXh0ZXJuYWxTeXN0ZW1SZWZJZCI6ICJBQTA5NkJFMS1CNEU3LTExZTktQUFCQy0wMDUwNTY5OTM5N0EiLAogICAgICAgICAgICAicGFydHlVSWQiOiAiQUEwOTZCRTEtQjRFNy0xMWU5LUFBQkMtMDA1MDU2OTkzOTdBIgogICAgICAgIH1dCiAgICB9Cn0=",
+    "messageId": "589285969581879",
+    "publishTime": "2019-07-09T14:04:26.677Z"
+  }
+}
